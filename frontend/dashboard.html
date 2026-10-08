@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Task<span>Flow</span></div>
+    <div class="top-actions">
+      <span id="welcomeUser"></span>
+      <button class="btn ghost" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-head">
+      <div>
+        <p class="eyebrow">WORKSPACE</p>
+        <h1>Dashboard</h1>
+        <p class="muted">Manage projects and keep your work moving.</p>
+      </div>
+      <button class="btn primary" onclick="openProjectModal()">+ New Project</button>
+    </div>
+
+    <section class="stats">
+      <div class="stat"><span>Projects</span><strong id="projectCount">0</strong></div>
+      <div class="stat"><span>Total Tasks</span><strong id="taskCount">0</strong></div>
+      <div class="stat"><span>Completed</span><strong id="doneCount">0</strong></div>
+      <div class="stat"><span>In Progress</span><strong id="progressCount">0</strong></div>
+    </section>
+
+    <section>
+      <div class="section-title"><h2>My Projects</h2></div>
+      <div id="projectsGrid" class="projects-grid"></div>
+      <p id="emptyProjects" class="empty hidden">No projects yet. Create your first project.</p>
+    </section>
+  </main>
+
+  <div id="projectModal" class="modal hidden">
+    <div class="modal-card">
+      <div class="modal-head"><h2 id="projectModalTitle">New Project</h2><button class="icon-btn" onclick="closeProjectModal()">×</button></div>
+      <form id="projectForm">
+        <input type="hidden" id="projectId">
+        <label>Project name</label>
+        <input id="projectName" required placeholder="e.g. College Website">
+        <label>Description</label>
+        <textarea id="projectDescription" rows="4" placeholder="What is this project about?"></textarea>
+        <div class="modal-actions">
+          <button type="button" class="btn ghost" onclick="closeProjectModal()">Cancel</button>
+          <button type="submit" class="btn primary">Save Project</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

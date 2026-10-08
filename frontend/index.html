@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+  <div class="auth-card">
+    <div class="brand">Task<span>Flow</span></div>
+    <p class="muted">Agile task & project manager</p>
+    <h1>Welcome back</h1>
+    <form id="loginForm">
+      <label>Email</label>
+      <input id="email" type="email" required placeholder="you@example.com">
+      <label>Password</label>
+      <input id="password" type="password" required placeholder="••••••••">
+      <button class="btn primary full" type="submit">Login</button>
+    </form>
+    <p id="message" class="message"></p>
+    <p class="switch">Don't have an account? <a href="register.html">Create one</a></p>
+  </div>
+  <script src="js/auth.js"></script>
+</body>
+</html>

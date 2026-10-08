@@ -1,0 +1,3 @@
+.project-card .open-btn { margin-top:14px; width:100%; }
+.project-card .edit-row { display:flex; gap:8px; margin-top:10px; }
+.project-card .edit-row .btn { flex:1; }
